@@ -1,3 +1,28 @@
+function getLength(obj){
+  return obj.length;
+}
+function getTotalBooksCount(books) {
+  //Objective - Return number of book objects in the array
+  //return the book array length;
+  //return books.length; 
+  return getLength(books);                                     
+}
+
+function getTotalAccountsCount(accounts) {
+  //Objective - Return number of account objects in accounts array
+  //return the accounts array length;
+  //return accounts.length;
+  return getLength(accounts);                                   
+}
+
+function getBooksBorrowedCount(books) {
+  //Objective - returns a number representing books checkout out.
+  //filter through the book borrows that are currently checked out;
+let notReturned = books.filter(book => book.borrows[0].returned === false) 
+//return the length of the new array with the checked out books;
+  return notReturned.length;
+};
+ 
 //helper function
 function _sortObjectsByValues(obj){
   let keys = Object.keys(obj);
@@ -10,28 +35,6 @@ function _sortObjectsByValues(obj){
   })
   return keys;
 }
-
-
-function getTotalBooksCount(books) {
-  //Objective - Return number of book objects in the array
-  //return the book array length;
-  return books.length;                                      
-}
-
-function getTotalAccountsCount(accounts) {
-  //Objective - Return number of account objects in accounts array
-  //return the accounts array length;
-  return accounts.length;                                   
-}
-
-function getBooksBorrowedCount(books) {
-  //Objective - returns a number representing books checkout out.
-  //filter through the book borrows that are currently checked out;
-let notReturned = books.filter(book => book.borrows[0].returned === false) 
-//return the length of the new array with the checked out books;
-  return notReturned.length;
-};
- 
 
 function getMostCommonGenres(books) {
   //objective - return an array representing most common occurring genres;

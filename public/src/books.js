@@ -38,7 +38,7 @@ function getBorrowersForBook(book, accounts) {
   //use slice to return only the first 10 objects;
   return result.slice(0,10);
 }
-//jn
+
 
 module.exports = {
   findAuthorById,
